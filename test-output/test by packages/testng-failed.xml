@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [test by packages]">
+  <test name="comm(failed)">
+    <classes>
+      <class name="comm.JdongTest">
+        <methods>
+          <include name="addpro"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- comm.JdongTest -->
+    </classes>
+  </test> <!-- comm(failed) -->
+</suite> <!-- Failed suite [test by packages] -->
