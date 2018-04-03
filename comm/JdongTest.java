@@ -1,6 +1,7 @@
 package comm;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.sql.Driver;
 
 import comm.loanL;
 import comm.productOpra;
@@ -56,8 +57,10 @@ public class JdongTest {
 		loan.init();
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void afterClass() {
+		//loan.quit();
+		
 	}
 
 	@BeforeTest
@@ -67,6 +70,7 @@ public class JdongTest {
 
 	@AfterTest
 	public void afterTest() {
+	
 	}
 
 	@BeforeSuite
@@ -83,16 +87,9 @@ public class JdongTest {
    Assert.assertEquals("", "");
 
 	}
-	@Test
+	@Test(dependsOnMethods={"loanLg"})
 	public void addpro() {
-		pro.addPro();
-		
-
-
-
-
-
-
+		loan.addPro1();
 	}
 
 }

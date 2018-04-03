@@ -3,16 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test1.NewTest">
+      <class name="comm.JdongTest">
         <methods>
-          <include name="afterTest"/>
-          <include name="afterMethod"/>
-          <include name="f"/>
+          <include name="addpro"/>
           <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="loanLg"/>
           <include name="afterClass"/>
-          <include name="BeforeClass"/>
+          <include name="beforeSuite"/>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- test1.NewTest -->
+      </class> <!-- comm.JdongTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -60,7 +60,7 @@ public class NewTest {
   }
   @BeforeClass
   public void BeforeClass(){  
-	  lg.init();
+	
   }
 
 }
