@@ -2,11 +2,19 @@ package comm;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.sql.Driver;
+import java.util.HashSet;
+import java.util.Random;
 
 import comm.loanL;
 import comm.productOpra;
 
+import net.bytebuddy.matcher.HasSuperTypeMatcher;
+
+import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.Assert;
+import org.testng.annotations.Configuration;
+import org.testng.annotations.Factory;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
@@ -18,12 +26,15 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 
-public class JdongTest {
-	loanL loan=new loanL();
-	productOpra pro=new productOpra();
-	
+import com.beust.jcommander.Parameter;
 
-	@Test(dataProvider = "dp")
+public class JdongTest {
+
+	productOpra pro=new productOpra();
+	loanL loan=new loanL();
+
+
+	@Test(dataProvider = "dp",groups={"testc"})
 	public void f(Integer n, String s) {
 	}
 	@BeforeMethod
@@ -45,22 +56,29 @@ public class JdongTest {
 	}
 
 	@DataProvider(name="loanParam")
-	public Object[][] data(){
+	public Object[][] data(Method m){
+		System.out.println(m.getName());
+		if(m.getName()=="loanLg"){
 
-		return new Object[][]{
-				{"admin","111111"}
-
+			return new Object[][]{
+					{"test","111111"},
+					
+			};
 		};
+		return new Object[][]{
+				{"admin","111111"}};
 	}
 	@BeforeClass
+	@Configuration(beforeTestClass=true,groups={"config"})
 	public void beforeClass() {
 		loan.init();
 	}
 
 	@AfterClass(alwaysRun=true)
+	@Configuration(afterTestClass=true,groups="config")
 	public void afterClass() {
-		//loan.quit();
-		
+		loan.quit();
+
 	}
 
 	@BeforeTest
@@ -70,7 +88,7 @@ public class JdongTest {
 
 	@AfterTest
 	public void afterTest() {
-	
+
 	}
 
 	@BeforeSuite
@@ -80,16 +98,46 @@ public class JdongTest {
 	@AfterSuite
 	public void afterSuite() {
 	}
-	@Test(dataProvider="loanParam")
-	public void loanLg(String name,String pwd){
 
+	@Parameters({"loginname","pwd"})
+	@Test(groups={"testa"})
+	public void loanLg(String name,String pwd) throws InterruptedException{
 		loan.login(name, pwd);
-   Assert.assertEquals("", "");
+		Thread.sleep(2000);
+		Assert.assertEquals(loan.art(), "http://10.36.40.211:8383/#/Home");
+		
+
 
 	}
-	@Test(dependsOnMethods={"loanLg"})
-	public void addpro() {
-		loan.addPro1();
+	@Test(dependsOnGroups={"testa"},dataProvider="test",groups={"testb"},alwaysRun=true,dataProviderClass=comm.loanL.class)
+	public void addpro(String tagName) {
+		loan.addPro1(tagName);
+		Assert.assertEquals(loan.art(), "http://10.36.40.211:8383/#/product/FeaturesManage");
 	}
+	@Test(groups={"testa"})
+	public String returnurl(){
+		String str=loan.art();
+		return	str;
+	}
+	@DataProvider(name="test")
+	public Object[][] getsource(){
+		int max=600;
+		int min=40;
+		String str="";
+		Random random=new Random();
+		HashSet<Integer> hs=new HashSet<Integer>();
+		while(hs.size()<10){
+			int j=random.nextInt(max)%(max-min+1)+min;
+			hs.add(j);
+		}
+		for(Integer it:hs){
+			str=Integer.toString(it);
+			return new Object[][]{new Object[]{"testaa"+str+1}};
+		}
+		return null;
+
+	}
+
 
 }
+

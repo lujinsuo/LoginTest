@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Default]" allow-return-values="true">
+  <parameter name="loginname" value="admin"/>
+  <parameter name="pwd" value="111111"/>
+  <test name="Testgroups(failed)">
+    <parameter name="loginname" value="admin"/>
+    <parameter name="pwd" value="111111"/>
+    <groups>
+      <run>
+        <include name="config"/>
+        <include name="testa"/>
+        <include name="testb"/>
+      </run>
+    </groups>
     <classes>
       <class name="comm.JdongTest">
         <methods>
-          <include name="addpro"/>
-          <include name="afterSuite"/>
+          <include name="addpro" invocation-numbers="0"/>
+          <include name="returnurl"/>
           <include name="beforeClass"/>
-          <include name="afterMethod"/>
-          <include name="afterTest"/>
           <include name="loanLg"/>
           <include name="afterClass"/>
-          <include name="beforeSuite"/>
-          <include name="beforeMethod"/>
-          <include name="beforeTest"/>
         </methods>
       </class> <!-- comm.JdongTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Testgroups(failed) -->
+</suite> <!-- Failed suite [Default] -->

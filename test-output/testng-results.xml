@@ -1,77 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15954" started-at="2018-04-03T08:30:22Z" finished-at="2018-04-03T08:30:38Z">
+  <suite name="Default" duration-ms="17567" started-at="2018-04-10T08:57:03Z" finished-at="2018-04-10T08:57:21Z">
     <groups>
+      <group name="testb">
+        <method signature="JdongTest.addpro(java.lang.String)[pri:0, instance:comm.JdongTest@2133c8f8]" name="addpro" class="comm.JdongTest"/>
+      </group> <!-- testb -->
+      <group name="testa">
+        <method signature="JdongTest.loanLg(java.lang.String, java.lang.String)[pri:0, instance:comm.JdongTest@2133c8f8]" name="loanLg" class="comm.JdongTest"/>
+        <method signature="JdongTest.returnurl()[pri:0, instance:comm.JdongTest@2133c8f8]" name="returnurl" class="comm.JdongTest"/>
+      </group> <!-- testa -->
     </groups>
-    <test name="Default test" duration-ms="15954" started-at="2018-04-03T08:30:22Z" finished-at="2018-04-03T08:30:38Z">
+    <test name="Testgroups" duration-ms="17567" started-at="2018-04-10T08:57:03Z" finished-at="2018-04-10T08:57:21Z">
       <class name="comm.JdongTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:comm.JdongTest@1d251891]" name="beforeSuite" is-config="true" duration-ms="17" started-at="2018-04-03T16:30:22Z" finished-at="2018-04-03T16:30:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:comm.JdongTest@1d251891]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-04-03T16:30:22Z" finished-at="2018-04-03T16:30:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:comm.JdongTest@1d251891]" name="beforeClass" is-config="true" duration-ms="11768" started-at="2018-04-03T16:30:22Z" finished-at="2018-04-03T16:30:34Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:comm.JdongTest@2133c8f8]" name="beforeClass" is-config="true" duration-ms="11846" started-at="2018-04-10T16:57:03Z" finished-at="2018-04-10T16:57:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:comm.JdongTest@1d251891]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-04-03T16:30:34Z" finished-at="2018-04-03T16:30:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)[pri:0, instance:comm.JdongTest@1d251891]" name="f" duration-ms="9" started-at="2018-04-03T16:30:34Z" data-provider="dp" finished-at="2018-04-03T16:30:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:comm.JdongTest@1d251891]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-04-03T16:30:34Z" finished-at="2018-04-03T16:30:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:comm.JdongTest@1d251891]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-04-03T16:30:34Z" finished-at="2018-04-03T16:30:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)[pri:0, instance:comm.JdongTest@1d251891]" name="f" duration-ms="1" started-at="2018-04-03T16:30:34Z" data-provider="dp" finished-at="2018-04-03T16:30:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:comm.JdongTest@1d251891]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-04-03T16:30:34Z" finished-at="2018-04-03T16:30:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:comm.JdongTest@1d251891]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-04-03T16:30:34Z" finished-at="2018-04-03T16:30:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="loanLg(java.lang.String, java.lang.String)[pri:0, instance:comm.JdongTest@1d251891]" name="loanLg" duration-ms="507" started-at="2018-04-03T16:30:34Z" data-provider="loanParam" finished-at="2018-04-03T16:30:34Z">
+        <test-method status="PASS" signature="loanLg(java.lang.String, java.lang.String)[pri:0, instance:comm.JdongTest@2133c8f8]" name="loanLg" duration-ms="2820" started-at="2018-04-10T16:57:15Z" finished-at="2018-04-10T16:57:18Z">
           <params>
             <param index="0">
               <value>
@@ -87,35 +34,65 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loanLg -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:comm.JdongTest@1d251891]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-04-03T16:30:34Z" finished-at="2018-04-03T16:30:34Z">
+        <test-method status="PASS" signature="returnurl()[pri:0, instance:comm.JdongTest@2133c8f8]" name="returnurl" duration-ms="20" started-at="2018-04-10T16:57:18Z" finished-at="2018-04-10T16:57:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:comm.JdongTest@1d251891]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-04-03T16:30:34Z" finished-at="2018-04-03T16:30:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="addpro()[pri:0, instance:comm.JdongTest@1d251891]" name="addpro" duration-ms="3627" started-at="2018-04-03T16:30:34Z" depends-on-methods="comm.JdongTest.loanLg" finished-at="2018-04-03T16:30:38Z">
+        </test-method> <!-- returnurl -->
+        <test-method status="FAIL" signature="addpro(java.lang.String)[pri:0, instance:comm.JdongTest@2133c8f8]" name="addpro" duration-ms="2078" depends-on-groups="testa" started-at="2018-04-10T16:57:18Z" data-provider="test" finished-at="2018-04-10T16:57:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testaa5281]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [http://10.36.40.211:8383/#/product/FeaturesManage] but found [http://10.36.40.211:8383/#/product/FeaturesAdd]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [http://10.36.40.211:8383/#/product/FeaturesManage] but found [http://10.36.40.211:8383/#/product/FeaturesAdd]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at comm.JdongTest.addpro(JdongTest.java:115)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addpro -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:comm.JdongTest@1d251891]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-04-03T16:30:38Z" finished-at="2018-04-03T16:30:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:comm.JdongTest@1d251891]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-04-03T16:30:38Z" finished-at="2018-04-03T16:30:38Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:comm.JdongTest@2133c8f8]" name="afterClass" is-config="true" duration-ms="766" started-at="2018-04-10T16:57:20Z" finished-at="2018-04-10T16:57:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:comm.JdongTest@1d251891]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-04-03T16:30:38Z" finished-at="2018-04-03T16:30:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:comm.JdongTest@1d251891]" name="afterSuite" is-config="true" duration-ms="1" started-at="2018-04-03T16:30:38Z" finished-at="2018-04-03T16:30:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
       </class> <!-- comm.JdongTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Testgroups -->
+  </suite> <!-- Default -->
 </testng-results>

@@ -2,15 +2,28 @@ package comm;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.xalan.xsltc.compiler.sym;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.seleniumhq.jetty9.server.Authentication.Failed;
+
+import com.gargoylesoftware.htmlunit.javascript.host.Element;
 
 public class loanL {
 	public WebDriver driver;
 	public String baseUrl;
 	public StringBuffer verificationErrorString=new StringBuffer();
+	private int num;
+	private String str;
+	 public loanL(int num){
+		 this.num=num;
+		  
+	 }
+	 public loanL(){};
+	
+	 
 	public void init(){
 		System.setProperty("webdriver.firefox.marionette", "D:\\seleniumÂ¼ÖÆ\\driver\\geckodriver-v0.9.0-arm7hf");
 		driver = new FirefoxDriver();
@@ -36,23 +49,37 @@ public class loanL {
 			System.err.println(verificationErrorString);
 		}
 	}
-	public  void addPro1(){
+	public  void addPro1(String tagname){
 		driver.findElement(By.cssSelector("div.el-submenu__title")).click();
 		driver.findElement(By.cssSelector("li.el-menu-item:nth-of-type(2)")).click();
+		driver.findElement(By.cssSelector("form.el-form.el-form--inline button[type=button]" )).click();
+		driver.findElement(By.xpath(".//*[@id='app']/div/div[2]/section/div/div[2]/section/div/div/form/div[1]/div/div/input")).sendKeys(tagname);
+		
+		driver.findElement(By.id("image")).clear();
+		driver.findElement(By.id("image")).sendKeys("C:\\Users\\Administrator\\Desktop\\Í¼Æ¬\\µçÇ©\\b.png");
+		driver.findElement(By.cssSelector(".el-form-item__content>.el-button.el-button--primary")).click();
 
 	}
-	
+
 	public void custom(){
 		driver.findElement(By.cssSelector("ul.el-menu.el-menu-vertical-demo>li.el-submenu:nth-of-type(2)")).click();
 		driver.findElement(By.cssSelector("ul.el-menu.el-menu-vertical-demo li.el-submenu:nth-of-type(2)>ul.el-menu>li:nth-child(1)+li")).click();
-		
-		
+
+
 	}
 	public void load(){
 		driver.findElement(By.cssSelector("ul.el-menu.el-menu-vertical-demo>li.el-submenu:nth-of-type(3)")).click();
 		driver.findElement(By.cssSelector("ul.el-menu.el-menu-vertical-demo>li.el-submenu:last-child>ul.el-menu li:nth-child(1)+li")).click();
-		
+
 	}
+
+	public String art(){
+		String  str=driver.getCurrentUrl();
+
+		return str;
+
 	}
+
+}
 
 

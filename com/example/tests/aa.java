@@ -1,5 +1,9 @@
 package com.example.tests;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
@@ -14,6 +18,7 @@ public class aa{
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
+	@BeforeMethod
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.firefox.marionette", "D:\\seleniumÂ¼ÖÆ\\driver\\geckodriver-v0.9.0-arm7hf");
@@ -34,12 +39,13 @@ public class aa{
 		driver.findElement(By.cssSelector("li.el-menu-item")).click();
 	}
 
+	@AfterMethod
 	@AfterClass(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {
-			fail(verificationErrorString);
+			Assert.fail(verificationErrorString);
 		}
 	}
 
