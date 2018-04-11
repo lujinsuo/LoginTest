@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.Assert;
 import org.testng.annotations.Configuration;
 import org.testng.annotations.Factory;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
@@ -27,7 +28,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 
 import com.beust.jcommander.Parameter;
-
+@Listeners({com.Report.NewReport.class})
 public class JdongTest {
 
 	productOpra pro=new productOpra();
@@ -62,7 +63,7 @@ public class JdongTest {
 
 			return new Object[][]{
 					{"test","111111"},
-					
+
 			};
 		};
 		return new Object[][]{
@@ -105,9 +106,6 @@ public class JdongTest {
 		loan.login(name, pwd);
 		Thread.sleep(2000);
 		Assert.assertEquals(loan.art(), "http://10.36.40.211:8383/#/Home");
-		
-
-
 	}
 	@Test(dependsOnGroups={"testa"},dataProvider="test",groups={"testb"},alwaysRun=true)
 	public void addpro(String tagName) {

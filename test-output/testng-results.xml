@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="suite2" duration-ms="19316" started-at="2018-04-11T03:57:07Z" finished-at="2018-04-11T03:57:26Z">
+  <suite name="suite2" duration-ms="20667" started-at="2018-04-11T09:16:47Z" finished-at="2018-04-11T09:17:08Z">
     <groups>
       <group name="testb">
-        <method signature="JdongTest.addpro(java.lang.String)[pri:0, instance:comm.JdongTest@1ef7fe8e]" name="addpro" class="comm.JdongTest"/>
+        <method signature="JdongTest.addpro(java.lang.String)[pri:0, instance:comm.JdongTest@5d3411d]" name="addpro" class="comm.JdongTest"/>
       </group> <!-- testb -->
       <group name="testa">
-        <method signature="JdongTest.loanLg(java.lang.String, java.lang.String)[pri:0, instance:comm.JdongTest@1ef7fe8e]" name="loanLg" class="comm.JdongTest"/>
-        <method signature="JdongTest.returnurl()[pri:0, instance:comm.JdongTest@1ef7fe8e]" name="returnurl" class="comm.JdongTest"/>
+        <method signature="JdongTest.loanLg(java.lang.String, java.lang.String)[pri:0, instance:comm.JdongTest@5d3411d]" name="loanLg" class="comm.JdongTest"/>
+        <method signature="JdongTest.returnurl()[pri:0, instance:comm.JdongTest@5d3411d]" name="returnurl" class="comm.JdongTest"/>
       </group> <!-- testa -->
     </groups>
-    <test name="Testgroups" duration-ms="19316" started-at="2018-04-11T03:57:07Z" finished-at="2018-04-11T03:57:26Z">
+    <test name="Testgroups" duration-ms="20667" started-at="2018-04-11T09:16:47Z" finished-at="2018-04-11T09:17:08Z">
       <class name="comm.JdongTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:comm.JdongTest@1ef7fe8e]" name="beforeClass" is-config="true" duration-ms="13747" started-at="2018-04-11T11:57:07Z" finished-at="2018-04-11T11:57:21Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:comm.JdongTest@5d3411d]" name="beforeClass" is-config="true" duration-ms="14529" started-at="2018-04-11T17:16:47Z" finished-at="2018-04-11T17:17:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="loanLg(java.lang.String, java.lang.String)[pri:0, instance:comm.JdongTest@1ef7fe8e]" name="loanLg" duration-ms="2604" started-at="2018-04-11T11:57:21Z" finished-at="2018-04-11T11:57:23Z">
+        <test-method status="PASS" signature="loanLg(java.lang.String, java.lang.String)[pri:0, instance:comm.JdongTest@5d3411d]" name="loanLg" duration-ms="2975" started-at="2018-04-11T17:17:02Z" finished-at="2018-04-11T17:17:05Z">
           <params>
             <param index="0">
               <value>
@@ -34,15 +34,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loanLg -->
-        <test-method status="PASS" signature="returnurl()[pri:0, instance:comm.JdongTest@1ef7fe8e]" name="returnurl" duration-ms="11" started-at="2018-04-11T11:57:23Z" finished-at="2018-04-11T11:57:23Z">
+        <test-method status="PASS" signature="returnurl()[pri:0, instance:comm.JdongTest@5d3411d]" name="returnurl" duration-ms="19" started-at="2018-04-11T17:17:05Z" finished-at="2018-04-11T17:17:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- returnurl -->
-        <test-method status="FAIL" signature="addpro(java.lang.String)[pri:0, instance:comm.JdongTest@1ef7fe8e]" name="addpro" duration-ms="2143" depends-on-groups="testa" started-at="2018-04-11T11:57:23Z" data-provider="test" finished-at="2018-04-11T11:57:25Z">
+        <test-method status="FAIL" signature="addpro(java.lang.String)[pri:0, instance:comm.JdongTest@5d3411d]" name="addpro" duration-ms="2311" depends-on-groups="testa" started-at="2018-04-11T17:17:05Z" data-provider="test" finished-at="2018-04-11T17:17:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[testaa4171]]>
+                <![CDATA[testaa4011]]>
               </value>
             </param>
           </params>
@@ -57,7 +57,7 @@
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:178)
 	at org.testng.Assert.assertEquals(Assert.java:188)
-	at comm.JdongTest.addpro(JdongTest.java:115)
+	at comm.JdongTest.addpro(JdongTest.java:113)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -79,14 +79,14 @@
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
 	at org.testng.TestNG.run(TestNG.java:1024)
-	at mainOPr.TestInput.main(TestInput.java:29)
+	at mainOPr.TestInput.main(TestInput.java:27)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addpro -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:comm.JdongTest@1ef7fe8e]" name="afterClass" is-config="true" duration-ms="793" started-at="2018-04-11T11:57:25Z" finished-at="2018-04-11T11:57:26Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:comm.JdongTest@5d3411d]" name="afterClass" is-config="true" duration-ms="811" started-at="2018-04-11T17:17:07Z" finished-at="2018-04-11T17:17:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
