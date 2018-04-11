@@ -109,7 +109,7 @@ public class JdongTest {
 
 
 	}
-	@Test(dependsOnGroups={"testa"},dataProvider="test",groups={"testb"},alwaysRun=true,dataProviderClass=comm.loanL.class)
+	@Test(dependsOnGroups={"testa"},dataProvider="test",groups={"testb"},alwaysRun=true)
 	public void addpro(String tagName) {
 		loan.addPro1(tagName);
 		Assert.assertEquals(loan.art(), "http://10.36.40.211:8383/#/product/FeaturesManage");

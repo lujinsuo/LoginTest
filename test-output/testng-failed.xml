@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default]" allow-return-values="true">
+<suite name="Failed suite [suite2]" allow-return-values="true">
   <parameter name="loginname" value="admin"/>
   <parameter name="pwd" value="111111"/>
   <test name="Testgroups(failed)">
@@ -25,4 +25,4 @@
       </class> <!-- comm.JdongTest -->
     </classes>
   </test> <!-- Testgroups(failed) -->
-</suite> <!-- Failed suite [Default] -->
+</suite> <!-- Failed suite [suite2] -->
