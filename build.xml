@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="GBK" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file. Any modifications will be overwritten. 
+	To include a user specific buildfile here, simply create one in the same 
+	directory with the processing instruction <?eclipse.ant.import?> as the first 
+	entry and export the buildfile again. -->
+<project basedir="." default="jar" name="test">
+	<property environment="env"/>
+	<property name="ECLIPSE_HOME" value="../../../../soft/tools/eclipse/eclipse" />
+	<property name="debuglevel" value="source,lines,vars" />
+	<property name="target" value="1.7" />
+	<property name="source" value="1.7" />
+	<property name="src.dir" value="src" />
+	<property name="classes.dir" value="classA" />
+	<property name="out.dir" value="out" />
+	<property name="jarname" value="Test" />
+	<path id="TestNG.libraryclasspath">
+		<pathelement
+			location="${ECLIPSE_HOME}/plugins/org.testng.eclipse_6.9.8.201510130443/lib/testng.jar" />
+		<pathelement
+			location="${ECLIPSE_HOME}/plugins/org.testng.eclipse_6.9.8.201510130443/lib/jcommander.jar" />
+		<pathelement
+			location="${ECLIPSE_HOME}/plugins/org.testng.eclipse_6.9.8.201510130443/lib/bsh-2.0b4.jar" />
+		<pathelement
+			location="${ECLIPSE_HOME}/plugins/org.testng.eclipse_6.9.8.201510130443/lib/snakeyaml.jar" />
+	</path>
+	<path id="test.classpath">
+		<path refid="TestNG.libraryclasspath" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/bundle-jars.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/byte-buddy-1.7.9.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/commons-codec-1.10.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/commons-exec-1.3.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/commons-io-2.6.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/commons-lang3-3.7.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/commons-logging-1.2.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/commons-net-3.6.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/commons-text-1.1.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/cssparser-0.9.24.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/gson-2.8.2.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/guava-23.6-jre.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/htmlunit-2.29.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/htmlunit-core-js-2.28.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/htmlunit-driver-2.29.0.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/httpclient-4.5.3.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/httpcore-4.4.6.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/httpmime-4.5.3.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/javax.servlet-api-3.1.0.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/jcip-annotations-1.0.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/jcommander-1.72.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/jetty-client-9.4.7.v20170914.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/jetty-http-9.4.8.v20171121.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/jetty-io-9.4.8.v20171121.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/jetty-util-9.4.8.v20171121.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/jetty-xml-9.4.7.v20170914.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/neko-htmlunit-2.28.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/okhttp-3.9.1.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/okio-1.13.0.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/sac-1.3.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/serializer-2.7.2.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/snakeyaml-1.19.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/websocket-api-9.4.7.v20170914.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/websocket-client-9.4.7.v20170914.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/websocket-common-9.4.7.v20170914.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/xalan-2.7.2.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/xercesImpl-2.11.0.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/libs/xml-apis-1.4.01.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/selenium-3.9.1-nodeps.jar" />
+		<pathelement
+			location="D:/selenium录制/driver/selenium-server-3.9.1 (1)/selenium-3.9.1-nodeps-sources.jar" />
+		<pathelement location="lib/jcommander-1.72.jar" />
+	</path>
+	<!-- <target name="init"/> <target name="clean"/> <target depends="clean" 
+		name="cleanall"/> <target depends="build-subprojects,build-project" name="build"/> 
+		<target name="build-subprojects"/> <target depends="init" name="build-project"> 
+		<echo message="${ant.project.name}: ${ant.file}"/> </target> <target description="Build 
+		all projects which reference this project. Useful to propagate changes." 
+		name="build-refprojects"/> <target description="copy Eclipse compiler jars 
+		to ant lib directory" name="init-eclipse-compiler"> <copy todir="${ant.library.dir}"> 
+		<fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/> 
+		</copy> <unzip dest="${ant.library.dir}"> <patternset includes="jdtCompilerAdapter.jar"/> 
+		<fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/> 
+		</unzip> </target> <target description="compile project with Eclipse compiler" 
+		name="build-eclipse-compiler"> <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/> 
+		<antcall target="build"/> </target> -->
+	<target name="init">
+		<mkdir dir="${classes.dir}" />
+	</target>
+	<target name="compile" depends="init">
+		<javac srcdir="${src.dir}" destdir="classA" includeantruntime="on">
+			<compilerarg line="-encoding GBK" />
+			<src path="src" />
+			<classpath refid="test.classpath" />
+		</javac>
+	</target>
+	<target depends="compile" name="build">
+		<echo message="${ant.project.name}: ${ant.file}" file="www.txt" />
+		<javac destdir="classA" debug="true" includeantruntime="false">
+			<src path="src" />
+			<classpath refid="test.classpath" />
+		</javac>
+	</target>
+	<target name="jar" depends="compile">
+		<!-- jar文件的输出路径 -->
+		<delete dir="${out.dir}" />
+		<mkdir dir="${out.dir}" />
+		<jar destfile="${out.dir}/test.jar" basedir="classA">
+			<!-- <include name="**/*TestInput.*"/> -->
+			<!-- <manifest> <attribute name="Class-Path" value="test.classpath" /> 
+				</manifest> -->
+		</jar>
+	</target>
+	<!-- 把生成的CLASS文件删除 -->
+	<target name="clean.build">
+		<delete dir="classA" />
+	</target>
+	<target name="main" depends="jar ,clean.build"/>
+	<target name="comm">
+		<java classname="comm.login" failonerror="true" fork="yes">
+			<classpath refid="test.classpath" />
+		</java>
+	</target>
+	<target name="TestInput (1)">
+		<java classname="mainOPr.TestInput" failonerror="true" fork="yes">
+			<classpath refid="test.classpath" />
+		</java>
+	</target>
+	<target name="TestInput">
+		<java classname="mainOPr.ConfigRead" failonerror="true" fork="yes">
+			<classpath refid="test.classpath" />
+		</java>
+	</target>
+</project>
