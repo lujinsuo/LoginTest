@@ -10,7 +10,7 @@ import java.util.Properties;
 
 public class ConfigRead {
 	public Properties Readconf() throws IOException {
-		InputStream input=this.getClass().getResourceAsStream("/FileConfig/confg.properties");
+		InputStream input=this.getClass().getResourceAsStream("E:\\Users\\Administrator\\workspace1\\test\\src\\mainOPr\\confg.properties");
 		/*File file=new File("confg.properties");
 		FileInputStream stream=new FileInputStream(file);*/
 		Properties pro=new Properties();
