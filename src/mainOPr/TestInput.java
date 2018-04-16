@@ -1,20 +1,27 @@
 package mainOPr;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
+import org.testng.TestNG;
+
 
 public class TestInput {
 
-	public static void main(String[] args)  {
-		/*Properties pro=new ConfigRead().Readconf();	
+	public static void main(String[] args) throws IOException  {
+		Properties pro=new ConfigRead().Readconf();	
 		TestNG testng=new TestNG();
 		List<String> suite=new ArrayList<String>();
-		suite.add("E:\\Users\\Administrator\\workspace1\\test\\loan.xml");
-		suite.add("E:\\Users\\Administrator\\workspace1\\test\\loginTest.xml");
-		suite.add(pro.getProperty("suite1"));
+		/*suite.add("E:\\Users\\Administrator\\workspace1\\test\\loan.xml");
+		suite.add("E:\\Users\\Administrator\\workspace1\\test\\loginTest.xml");*/
+		//suite.add(pro.getProperty("suite1"));
 		suite.add(pro.getProperty("suite2"));		
 		testng.setTestSuites(suite);
-		testng.run();*/
+		testng.run();
 		
-		System.err.println("aaa");
+		System.err.println("bbb");
 	}
 }
 

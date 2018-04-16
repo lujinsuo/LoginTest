@@ -4,7 +4,7 @@
 	directory with the processing instruction <?eclipse.ant.import?> as the first 
 	entry and export the buildfile again. -->
 <project basedir="." default="jar" name="test">
-	<property environment="env"/>
+	<property environment="env" />
 	<property name="ECLIPSE_HOME" value="../../../../soft/tools/eclipse/eclipse" />
 	<property name="debuglevel" value="source,lines,vars" />
 	<property name="target" value="1.7" />
@@ -13,6 +13,9 @@
 	<property name="classes.dir" value="classA" />
 	<property name="out.dir" value="out" />
 	<property name="jarname" value="Test" />
+	<property name="lib.dir" value="lib" />
+	<property name="xml" value="xml"></property>
+	<property name="FileConfig" value="FileConfig"></property>
 	<path id="TestNG.libraryclasspath">
 		<pathelement
 			location="${ECLIPSE_HOME}/plugins/org.testng.eclipse_6.9.8.201510130443/lib/testng.jar" />
@@ -128,6 +131,7 @@
 			<compilerarg line="-encoding GBK" />
 			<src path="src" />
 			<classpath refid="test.classpath" />
+			<classpath refid="TestNG.libraryclasspath" />
 		</javac>
 	</target>
 	<target depends="compile" name="build">
@@ -135,6 +139,8 @@
 		<javac destdir="classA" debug="true" includeantruntime="false">
 			<src path="src" />
 			<classpath refid="test.classpath" />
+			<classpath refid="TestNG.libraryclasspath" />
+
 		</javac>
 	</target>
 	<target name="jar" depends="compile">
@@ -143,15 +149,23 @@
 		<mkdir dir="${out.dir}" />
 		<jar destfile="${out.dir}/test.jar" basedir="classA">
 			<!-- <include name="**/*TestInput.*"/> -->
-			<!-- <manifest> <attribute name="Class-Path" value="test.classpath" /> 
-				</manifest> -->
+			<zipgroupfileset dir="testlib" includes="*.jar" />
+			<manifest>
+				<attribute name="Main-class" value="mainOPr.TestInput" />
+				<attribute name="Class-Path" value="classA">
+				</attribute>
+			</manifest>
+			<fileset dir="${FileConfig}" />
+			<fileset dir="testlib" />
+			<fileset dir="${xml}" />
+
 		</jar>
 	</target>
 	<!-- 把生成的CLASS文件删除 -->
 	<target name="clean.build">
 		<delete dir="classA" />
 	</target>
-	<target name="main" depends="jar ,clean.build"/>
+	<target name="main" depends="jar ,clean.build" />
 	<target name="comm">
 		<java classname="comm.login" failonerror="true" fork="yes">
 			<classpath refid="test.classpath" />

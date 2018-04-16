@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Random;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -17,7 +18,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-@Listeners({com.Report.NewReport.class})
+@Listeners({Report.NewReport.class})
 public class JdongTest {
 
 	productOpra pro=new productOpra();
