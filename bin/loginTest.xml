@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="suite2" parallel="false" allow-return-values="true">
+	<test verbose="2" name="Testgroups">
+		<parameters>
+			<parameter name="loginname" value="test"></parameter>
+			<parameter name="pwd" value="111111"></parameter>
+			<parameter name="loginname" value="admin"></parameter>
+			<parameter name="pwd" value="111111"></parameter>
+		</parameters>
+
+		<groups>
+			<run>
+				<include name="config"></include>
+				<include name="testa"></include>
+				<include name="testb"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="comm.JdongTest">
+				<!-- <methods> <include name="loanLg"></include> </methods> -->
+
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

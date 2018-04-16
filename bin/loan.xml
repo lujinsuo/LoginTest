@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="suite1" parallel="false" allow-return-values="true" >
+	<test verbose="2" name="Testgroups"  allow-return-values="true">
+		<groups>
+			<run>
+				<include name="config"></include>
+				<include name="testa"></include>
+				<include name="testb"></include>
+			</run>
+		</groups>
+
+		<classes>
+			<class name="comm.JdongTest">
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
