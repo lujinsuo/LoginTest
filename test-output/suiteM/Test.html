@@ -1,0 +1,215 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Apr 19 18:22:47 CST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>26 seconds (26231 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='comm.JdongTest.delePro()'><b>delePro</b><br>Test class: comm.JdongTest</td>
+<td><div><pre>org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: An invalid or illegal selector was specified
+Command duration or timeout: 0 milliseconds
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:465)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at comm.loanL.delePro(loanL.java:68)
+	at comm.JdongTest.delePro(JdongTest.java:130)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: An invalid or illegal selector was specified
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
+System info: host: &apos;CE-20150821IBGT&apos;, ip: &apos;10.36.40.91&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11858)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11889)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11893)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/k(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13378)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13383)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13325)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1530515403", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1530515403'><pre>org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: An invalid or illegal selector was specified
+Command duration or timeout: 0 milliseconds
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:465)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at comm.loanL.delePro(loanL.java:68)
+	at comm.JdongTest.delePro(JdongTest.java:130)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: An invalid or illegal selector was specified
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
+System info: host: &apos;CE-20150821IBGT&apos;, ip: &apos;10.36.40.91&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11858)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11889)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11893)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/k(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13378)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13383)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13325)
+</pre></div></td>
+<td>0</td>
+<td>comm.JdongTest@19dfb72a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='comm.JdongTest.addpro()'><b>addpro</b><br>Test class: comm.JdongTest<br>Parameters: testc14331</td>
+<td></td>
+<td>2</td>
+<td>comm.JdongTest@19dfb72a</td></tr>
+<tr>
+<td title='comm.JdongTest.f()'><b>f</b><br>Test class: comm.JdongTest<br>Parameters: 1, a</td>
+<td></td>
+<td>0</td>
+<td>comm.JdongTest@19dfb72a</td></tr>
+<tr>
+<td title='comm.JdongTest.f()'><b>f</b><br>Test class: comm.JdongTest<br>Parameters: 2, b</td>
+<td></td>
+<td>0</td>
+<td>comm.JdongTest@19dfb72a</td></tr>
+<tr>
+<td title='Metria.TestMetr.lgin()'><b>lgin</b><br>Test class: Metria.TestMetr<br>Parameters: admin, 111111</td>
+<td></td>
+<td>0</td>
+<td>Metria.TestMetr@17c68925</td></tr>
+<tr>
+<td title='comm.JdongTest.loanLg()'><b>loanLg</b><br>Test class: comm.JdongTest<br>Parameters: test, 111111</td>
+<td></td>
+<td>2</td>
+<td>comm.JdongTest@19dfb72a</td></tr>
+<tr>
+<td title='comm.JdongTest.returnurl()'><b>returnurl</b><br>Test class: comm.JdongTest</td>
+<td></td>
+<td>0</td>
+<td>comm.JdongTest@19dfb72a</td></tr>
+</table><p>
+</body>
+</html>

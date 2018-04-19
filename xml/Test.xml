@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="suite1" parallel="tests" allow-return-values="true"  thread-count="2" >
+	<test verbose="2" name="test1"  allow-return-values="true"  group-by-instances="true">
+	    <parameter name="test-name" value="test-method One"/>
+		<classes>
+			<class name="comm.JdongTest">
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	<test verbose="2" name="test2"  allow-return-values="true"  group-by-instances="true">
+	    <parameter name="test-name" value="test-method two"/>
+		<classes>
+			<class name="comm.JdongTest">
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

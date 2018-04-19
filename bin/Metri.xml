@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="suiteM" parallel="classes"  Thread-count="3" allow-return-values="true">
+	<test verbose="2" name="Test" allow-return-values="true">
+		<classes>
+				<class name="Metria.TestMetr" />
+				<class name="comm.JdongTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
