@@ -39,7 +39,7 @@ public class NewReport implements IReporter {
 			}
 		}
 		this.sort(list);
-		this.outputResult(list, "D:\\seleniumÂ¼ÖÆ\\test.txt");
+		this.outputResult(list, "C:\\Users\\Administrator\\.jenkins\\workspace\\È«¼¯´ûui\\b.txt");
 	}
 	private ArrayList<ITestResult> listTestResult(IResultMap resultMap){
 		Set<ITestResult> results =resultMap.getAllResults();

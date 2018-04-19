@@ -5,12 +5,13 @@
     <classes>
       <class name="comm.JdongTest">
         <methods>
-          <include name="addpro" invocation-numbers="0"/>
+          <include name="addpro"/>
           <include name="afterSuite"/>
+          <include name="delePro"/>
           <include name="beforeClass"/>
           <include name="afterMethod"/>
           <include name="afterTest"/>
-          <include name="loanLg" invocation-numbers="1"/>
+          <include name="loanLg" invocation-numbers="0"/>
           <include name="afterClass"/>
           <include name="beforeSuite"/>
           <include name="beforeMethod"/>

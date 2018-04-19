@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Testgroups</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Apr 13 18:52:16 CST 2018</td>
+<td>Started on:</td><td>Thu Apr 19 16:58:34 CST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>17 seconds (17363 ms)</td>
+<tr><td>Total time:</td><td>21 seconds (21418 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>testb config testa </td>
 </tr><tr>
@@ -75,14 +75,28 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='comm.JdongTest.addpro()'><b>addpro</b><br>Test class: comm.JdongTest<br>Parameters: testaa5301</td>
-<td><div><pre>java.lang.AssertionError: expected [http://10.36.40.211:8383/#/product/FeaturesManage] but found [http://10.36.40.211:8383/#/product/FeaturesAdd]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at org.testng.Assert.assertEquals(Assert.java:188)
-	at comm.JdongTest.addpro(Unknown Source)
+<td title='comm.JdongTest.delePro()'><b>delePro</b><br>Test class: comm.JdongTest</td>
+<td><div><pre>org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: An invalid or illegal selector was specified
+Command duration or timeout: 0 milliseconds
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:465)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at comm.loanL.delePro(loanL.java:68)
+	at comm.JdongTest.delePro(JdongTest.java:128)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -104,15 +118,41 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
 	at org.testng.TestNG.run(TestNG.java:1024)
-	at mainOPr.TestInput.main(Unknown Source)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1267556427", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1267556427'><pre>java.lang.AssertionError: expected [http://10.36.40.211:8383/#/product/FeaturesManage] but found [http://10.36.40.211:8383/#/product/FeaturesAdd]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at org.testng.Assert.assertEquals(Assert.java:188)
-	at comm.JdongTest.addpro(Unknown Source)
+	at mainOPr.TestInput.main(TestInput.java:22)
+Caused by: org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: An invalid or illegal selector was specified
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
+System info: host: &apos;CE-20150821IBGT&apos;, ip: &apos;10.36.40.91&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous5252888452992040971webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11858)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous5252888452992040971webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11889)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous5252888452992040971webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11893)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/k(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous5252888452992040971webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13378)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous5252888452992040971webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13383)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous5252888452992040971webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13325)
+</pre></div><a href='#' onClick='toggleBox("stack-trace238762799", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace238762799'><pre>org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: An invalid or illegal selector was specified
+Command duration or timeout: 0 milliseconds
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:465)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at comm.loanL.delePro(loanL.java:68)
+	at comm.JdongTest.delePro(JdongTest.java:128)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -134,10 +174,70 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
 	at org.testng.TestNG.run(TestNG.java:1024)
-	at mainOPr.TestInput.main(Unknown Source)
+	at mainOPr.TestInput.main(TestInput.java:22)
+Caused by: org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: An invalid or illegal selector was specified
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
+System info: host: &apos;CE-20150821IBGT&apos;, ip: &apos;10.36.40.91&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous5252888452992040971webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11858)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous5252888452992040971webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11889)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous5252888452992040971webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11893)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/k(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous5252888452992040971webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13378)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous5252888452992040971webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13383)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous5252888452992040971webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13325)
 </pre></div></td>
-<td>1</td>
-<td>comm.JdongTest@532760d8</td></tr>
+<td>0</td>
+<td>comm.JdongTest@3ac42916</td></tr>
+<tr>
+<td title='comm.JdongTest.loanLg()'><b>loanLg</b><br>Test class: comm.JdongTest<br>Parameters: test, 111111</td>
+<td><div><pre>org.testng.TestException: 
+Method JdongTest.loanLg(java.lang.String, java.lang.String)[pri:0, instance:comm.JdongTest@3ac42916] should have thrown an exception of type class java.lang.InterruptedException
+	at org.testng.internal.ExpectedExceptionsHolder.noException(ExpectedExceptionsHolder.java:89)
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1376)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:677)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at mainOPr.TestInput.main(TestInput.java:22)
+</pre></div><a href='#' onClick='toggleBox("stack-trace704106237", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace704106237'><pre>org.testng.TestException: 
+Method JdongTest.loanLg(java.lang.String, java.lang.String)[pri:0, instance:comm.JdongTest@3ac42916] should have thrown an exception of type class java.lang.InterruptedException
+	at org.testng.internal.ExpectedExceptionsHolder.noException(ExpectedExceptionsHolder.java:89)
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1376)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:677)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at mainOPr.TestInput.main(TestInput.java:22)
+</pre></div></td>
+<td>2</td>
+<td>comm.JdongTest@3ac42916</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -147,15 +247,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='comm.JdongTest.loanLg()'><b>loanLg</b><br>Test class: comm.JdongTest<br>Parameters: admin, 111111</td>
+<td title='comm.JdongTest.addpro()'><b>addpro</b><br>Test class: comm.JdongTest<br>Parameters: testc15121</td>
 <td></td>
 <td>2</td>
-<td>comm.JdongTest@532760d8</td></tr>
+<td>comm.JdongTest@3ac42916</td></tr>
 <tr>
 <td title='comm.JdongTest.returnurl()'><b>returnurl</b><br>Test class: comm.JdongTest</td>
 <td></td>
 <td>0</td>
-<td>comm.JdongTest@532760d8</td></tr>
+<td>comm.JdongTest@3ac42916</td></tr>
 </table><p>
 </body>
 </html>

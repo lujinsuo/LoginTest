@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [suite1]" allow-return-values="true">
-  <test name="Testgroups(failed)">
-    <groups>
-      <run>
-        <include name="config"/>
-        <include name="testa"/>
-        <include name="testb"/>
-      </run>
-    </groups>
+<suite name="Failed suite [suite1]" parallel="true" allow-return-values="true">
+  <parameter name="test-name" value="test-method One"/>
+  <test name="Testgroups(failed)" parallel="true">
+    <parameter name="test-name" value="test-method One"/>
     <classes>
       <class name="comm.JdongTest">
         <methods>
-          <include name="addpro" invocation-numbers="0"/>
+          <include name="addpro"/>
+          <include name="afterSuite"/>
           <include name="returnurl"/>
           <include name="beforeClass"/>
-          <include name="loanLg"/>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="loanLg" invocation-numbers="0"/>
           <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
         </methods>
       </class> <!-- comm.JdongTest -->
     </classes>

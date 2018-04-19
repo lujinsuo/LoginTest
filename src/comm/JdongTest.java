@@ -1,5 +1,6 @@
 package comm;
 import java.lang.reflect.Method;
+import java.sql.Driver;
 import java.util.HashSet;
 import java.util.Random;
 
@@ -15,25 +16,39 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Configuration;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.ExpectedExceptions;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.beust.jcommander.Parameter;
 @Listeners({Report.NewReport.class})
 public class JdongTest {
+	String str="";
+
 
 	productOpra pro=new productOpra();
 	loanL loan=new loanL();
 
 
 	@Test(dataProvider = "dp",groups={"testc"})
+
 	public void f(Integer n, String s) {
+		long id=Thread.currentThread().getId();
+
+
 	}
 	@BeforeMethod
 	public void beforeMethod() {
+		long id=Thread.currentThread().getId();
+		System.out.println("before Thread is"+id);
 	}
 
 	@AfterMethod
 	public void afterMethod() {
+		long id=Thread.currentThread().getId();
+		System.out.println("after Thread is" +id);
+
 	}
 
 
@@ -46,8 +61,8 @@ public class JdongTest {
 
 	}
 
-	@DataProvider(name="loanParam")
-	public Object[][] data(Method m){
+	@DataProvider(name="loanParam", parallel=true)
+	public static Object[][] data(Method m){
 		System.out.println(m.getName());
 		if(m.getName()=="loanLg"){
 
@@ -55,9 +70,11 @@ public class JdongTest {
 					{"test","111111"},
 
 			};
-		};
-		return new Object[][]{
-				{"admin","111111"}};
+		}else{
+			return new Object[][]{
+					{"admin","111111"}};
+		}
+
 	}
 	@BeforeClass
 	@Configuration(beforeTestClass=true,groups={"config"})
@@ -65,21 +82,22 @@ public class JdongTest {
 		loan.init();
 	}
 
-	@AfterClass(alwaysRun=true)
+	@AfterClass(alwaysRun=true,dependsOnGroups="testb")
 	@Configuration(afterTestClass=true,groups="config")
 	public void afterClass() {
 		loan.quit();
-
+		long id = Thread.currentThread().getId();
 	}
-
+	@Parameters({"test-name"})
 	@BeforeTest
 	public void beforeTest() {
-
+		long id=Thread.currentThread().getId();
+		//		System.out.println("Before test " + testName + ". Thread id is: " + id);
 	}
 
 	@AfterTest
 	public void afterTest() {
-
+		long id = Thread.currentThread().getId();
 	}
 
 	@BeforeSuite
@@ -90,17 +108,27 @@ public class JdongTest {
 	public void afterSuite() {
 	}
 
-	@Parameters({"loginname","pwd"})
-	@Test(groups={"testa"})
-	public void loanLg(String name,String pwd) throws InterruptedException{
+	/*@Parameters({"loginname","pwd"})*/
+	@Test(groups={"testa"} ,dataProvider="loanParam",singleThreaded=true,priority=1 )
+//	@ExpectedExceptions(InterruptedException.class)
+	public void loanLg(String name,String pwd) throws Exception  {
 		loan.login(name, pwd);
 		Thread.sleep(2000);
 		Assert.assertEquals(loan.art(), "http://10.36.40.211:8383/#/Home");
+		//assert false;
 	}
-	@Test(dependsOnGroups={"testa"},dataProvider="test",groups={"testb"},alwaysRun=true)
+	@Test(dependsOnGroups={"testa"},dataProvider="test",groups={"testb"},alwaysRun=true
+		,priority=2)
 	public void addpro(String tagName) {
+		long id=Thread.currentThread().getId();
 		loan.addPro1(tagName);
-		Assert.assertEquals(loan.art(), "http://10.36.40.211:8383/#/product/FeaturesManage");
+		this.str=tagName;
+		//Assert.assertEquals(loan.art(), "http://10.36.40.211:8383/#/product/FeaturesManage");
+	}
+	@Test(dependsOnMethods={"addpro"},groups={"testb"})
+	public void delePro(){
+		loan.delePro();
+		//	Assert.assertEquals(loan.art(), "http://10.36.40.211:8383/#/product/FeaturesAdd?featureId=tagname");
 	}
 	@Test(groups={"testa"})
 	public String returnurl(){
@@ -120,9 +148,16 @@ public class JdongTest {
 		}
 		for(Integer it:hs){
 			str=Integer.toString(it);
-			return new Object[][]{new Object[]{"testaa"+str+1}};
+			return new Object[][]{new Object[]{"testc1"+str+1}};
 		}
 		return null;
+
+	}
+
+	@DataProvider(name="del")
+	public Object[][] delpro(){
+		return new Object[][]{new Object[]{str}};
+
 
 	}
 

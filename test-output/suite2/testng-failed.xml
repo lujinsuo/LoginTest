@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [suite2]" allow-return-values="true">
-  <parameter name="loginname" value="admin"/>
-  <parameter name="pwd" value="111111"/>
-  <test name="Testgroups(failed)">
-    <parameter name="loginname" value="admin"/>
-    <parameter name="pwd" value="111111"/>
-    <groups>
-      <run>
-        <include name="config"/>
-        <include name="testa"/>
-        <include name="testb"/>
-      </run>
-    </groups>
+<suite name="Failed suite [suite2]" parallel="true" allow-return-values="true">
+  <test name="Test(failed)" parallel="true">
     <classes>
       <class name="comm.JdongTest">
         <methods>
-          <include name="addpro" invocation-numbers="0"/>
+          <include name="addpro"/>
+          <include name="afterSuite"/>
           <include name="returnurl"/>
+          <include name="delePro"/>
           <include name="beforeClass"/>
-          <include name="loanLg"/>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="loanLg" invocation-numbers="0"/>
           <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
         </methods>
       </class> <!-- comm.JdongTest -->
+      <class name="Metria.TestMetr">
+        <methods>
+          <include name="after"/>
+          <include name="lgin"/>
+          <include name="Befclass"/>
+        </methods>
+      </class> <!-- Metria.TestMetr -->
     </classes>
-  </test> <!-- Testgroups(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [suite2] -->

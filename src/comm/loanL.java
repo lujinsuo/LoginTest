@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.seleniumhq.jetty9.server.Authentication.Failed;
+import org.testng.annotations.Test;
 
 import com.gargoylesoftware.htmlunit.javascript.host.Element;
 
@@ -60,6 +61,12 @@ public class loanL {
 		driver.findElement(By.cssSelector(".el-form-item__content>.el-button.el-button--primary")).click();
 
 	}
+	
+	public void delePro(){
+	//driver.findElement(By.cssSelector("a[href='#/product/FeaturesAdd?featureId=50'][target='_self']")).click();	
+	//driver.findElement(By.xpath("//a[@href='#/product/FeaturesAdd?featureId=50']")).click();
+	driver.findElement(By.cssSelector(".el-table__row hover-row>td:nth-type-of(4)>.cell>button :nth-type-of(1)")).click();
+	};
 
 	public void custom(){
 		driver.findElement(By.cssSelector("ul.el-menu.el-menu-vertical-demo>li.el-submenu:nth-of-type(2)")).click();

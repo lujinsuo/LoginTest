@@ -17,7 +17,8 @@ public class TestInput {
 		/*suite.add("E:\\Users\\Administrator\\workspace1\\test\\loan.xml");
 		suite.add("E:\\Users\\Administrator\\workspace1\\test\\loginTest.xml");*/
 		//suite.add(pro.getProperty("suite1"));
-		suite.add(pro.getProperty("suite2"));		
+		suite.add(pro.getProperty("suite2"));	
+		suite.add(pro.getProperty("suite3"));
 		testng.setTestSuites(suite);
 		testng.run();
 		

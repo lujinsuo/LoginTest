@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="suite1" parallel="false" allow-return-values="true" >
-	<test verbose="2" name="Testgroups"  allow-return-values="true">
-		<groups>
+<suite name="suite1" parallel="true" allow-return-values="true"   >
+	<test verbose="2" name="Testgroups"  allow-return-values="true" >
+	   
+		<!-- <groups>
 			<run>
 				<include name="config"></include>
 				<include name="testa"></include>
 				<include name="testb"></include>
 			</run>
-		</groups>
-
+		</groups> -->
+      
 		<classes>
 			<class name="comm.JdongTest">
 			</class>
