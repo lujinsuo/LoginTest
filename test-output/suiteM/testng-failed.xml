@@ -3,25 +3,12 @@
 <suite name="Failed suite [suiteM]" parallel="classes" allow-return-values="true">
   <test name="Test(failed)" parallel="classes">
     <classes>
-      <class name="comm.JdongTest">
-        <methods>
-          <include name="addpro"/>
-          <include name="afterSuite"/>
-          <include name="returnurl"/>
-          <include name="delePro"/>
-          <include name="beforeClass"/>
-          <include name="afterMethod"/>
-          <include name="afterTest"/>
-          <include name="loanLg"/>
-          <include name="afterClass"/>
-          <include name="beforeSuite"/>
-          <include name="beforeMethod"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- comm.JdongTest -->
       <class name="Metria.TestMetr">
         <methods>
           <include name="after"/>
+          <include name="del"/>
+          <include name="lgin"/>
+          <include name="add"/>
           <include name="Befclass"/>
         </methods>
       </class> <!-- Metria.TestMetr -->

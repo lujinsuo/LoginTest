@@ -1,5 +1,8 @@
 package Metria;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import java.lang.reflect.Method;
 
 import org.testng.annotations.BeforeClass;
@@ -21,10 +24,10 @@ public class TestMetr {
 		met.init();	
 	}
 
-	@AfterClass
+	@AfterClass(dependsOnGroups={"testdel"})
 	@Configuration(afterTestClass=true,groups={"config"})
 	public void after(){
-		met.quit();
+		//met.quit();
 	}
 
 	@Test(dataProvider="loanParam",dataProviderClass=comm.JdongTest.class,singleThreaded=true)
@@ -32,6 +35,15 @@ public class TestMetr {
 		met.login(name, pwd);
 		System.out.println("met");
 
+	}
+	@Test(dependsOnMethods={"lgin"})
+	public void add(){
+		met.add();
+	}
+	
+	@Test(dependsOnMethods={"add"},groups="testdel")
+	public void del(){
+		met.del();
 	}
 
 	@DataProvider(name="login")
@@ -44,6 +56,7 @@ public class TestMetr {
 		}
 
 	}
+	
 
 
 }

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 19 18:22:47 CST 2018</td>
+<td>Started on:</td><td>Mon Apr 23 16:33:02 CST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>26 seconds (26231 ms)</td>
+<tr><td>Total time:</td><td>52 seconds (52923 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,9 +75,8 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='comm.JdongTest.delePro()'><b>delePro</b><br>Test class: comm.JdongTest</td>
-<td><div><pre>org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: An invalid or illegal selector was specified
+<td title='Metria.TestMetr.del()'><b>del</b><br>Test class: Metria.TestMetr</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[@class=&apos;el-table_1_column_3&apos;]/div[@class=&apos;cell&apos;]/button[@type=&apos;button&apos;][3]&quot;}
 Command duration or timeout: 0 milliseconds
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -92,11 +91,11 @@ Command duration or timeout: 0 milliseconds
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:465)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at comm.loanL.delePro(loanL.java:68)
-	at comm.JdongTest.delePro(JdongTest.java:130)
+	at Metria.addMetr.del(addMetr.java:49)
+	at Metria.TestMetr.del(TestMetr.java:46)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -110,21 +109,15 @@ Command duration or timeout: 0 milliseconds
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: An invalid or illegal selector was specified
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[@class=&apos;el-table_1_column_3&apos;]/div[@class=&apos;cell&apos;]/button[@type=&apos;button&apos;][3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
 System info: host: &apos;CE-20150821IBGT&apos;, ip: &apos;10.36.40.91&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_141&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11858)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11889)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11893)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/k(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13378)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13383)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13325)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1530515403", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1530515403'><pre>org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: An invalid or illegal selector was specified
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous1505374216930056560webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11884)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous1505374216930056560webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:918)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1376119749", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1376119749'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[@class=&apos;el-table_1_column_3&apos;]/div[@class=&apos;cell&apos;]/button[@type=&apos;button&apos;][3]&quot;}
 Command duration or timeout: 0 milliseconds
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -139,11 +132,11 @@ Command duration or timeout: 0 milliseconds
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:465)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at comm.loanL.delePro(loanL.java:68)
-	at comm.JdongTest.delePro(JdongTest.java:130)
+	at Metria.addMetr.del(addMetr.java:49)
+	at Metria.TestMetr.del(TestMetr.java:46)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -157,21 +150,16 @@ Command duration or timeout: 0 milliseconds
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: An invalid or illegal selector was specified
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[@class=&apos;el-table_1_column_3&apos;]/div[@class=&apos;cell&apos;]/button[@type=&apos;button&apos;][3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
 System info: host: &apos;CE-20150821IBGT&apos;, ip: &apos;10.36.40.91&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_141&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11858)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11889)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11893)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/k(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13378)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13383)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13325)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous1505374216930056560webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11884)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous1505374216930056560webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:918)
 </pre></div></td>
-<td>0</td>
-<td>comm.JdongTest@19dfb72a</td></tr>
+<td>30</td>
+<td>Metria.TestMetr@7f63425a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -181,35 +169,15 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='comm.JdongTest.addpro()'><b>addpro</b><br>Test class: comm.JdongTest<br>Parameters: testc14331</td>
+<td title='Metria.TestMetr.add()'><b>add</b><br>Test class: Metria.TestMetr</td>
 <td></td>
 <td>2</td>
-<td>comm.JdongTest@19dfb72a</td></tr>
-<tr>
-<td title='comm.JdongTest.f()'><b>f</b><br>Test class: comm.JdongTest<br>Parameters: 1, a</td>
-<td></td>
-<td>0</td>
-<td>comm.JdongTest@19dfb72a</td></tr>
-<tr>
-<td title='comm.JdongTest.f()'><b>f</b><br>Test class: comm.JdongTest<br>Parameters: 2, b</td>
-<td></td>
-<td>0</td>
-<td>comm.JdongTest@19dfb72a</td></tr>
+<td>Metria.TestMetr@7f63425a</td></tr>
 <tr>
 <td title='Metria.TestMetr.lgin()'><b>lgin</b><br>Test class: Metria.TestMetr<br>Parameters: admin, 111111</td>
 <td></td>
 <td>0</td>
-<td>Metria.TestMetr@17c68925</td></tr>
-<tr>
-<td title='comm.JdongTest.loanLg()'><b>loanLg</b><br>Test class: comm.JdongTest<br>Parameters: test, 111111</td>
-<td></td>
-<td>2</td>
-<td>comm.JdongTest@19dfb72a</td></tr>
-<tr>
-<td title='comm.JdongTest.returnurl()'><b>returnurl</b><br>Test class: comm.JdongTest</td>
-<td></td>
-<td>0</td>
-<td>comm.JdongTest@19dfb72a</td></tr>
+<td>Metria.TestMetr@7f63425a</td></tr>
 </table><p>
 </body>
 </html>

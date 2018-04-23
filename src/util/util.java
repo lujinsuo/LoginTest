@@ -8,7 +8,7 @@ public interface util {
 	public final static WebDriver driver=new FirefoxDriver();
 	public void init();
 	public void login(String name,String pwd);
-	public void add(String tagname);
+	public void add();
 	public void del();
 	void quit();
 	

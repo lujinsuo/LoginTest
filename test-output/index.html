@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-suiteM">
-                    <span>3 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,7 +101,7 @@
                     <div class="method-list-content failed suite-suiteM">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-suiteM" title="comm.JdongTest" hash-for-method="delePro">delePro</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-suiteM" title="Metria.TestMetr" hash-for-method="del">del</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-suiteM -->
@@ -115,32 +115,12 @@
                     <div class="method-list-content passed suite-suiteM">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-suiteM" title="comm.JdongTest" hash-for-method="addpro(testc14331)">addpro(testc14331)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-suiteM" title="comm.JdongTest" hash-for-method="f(2, b)">f(2, b)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-suiteM" title="comm.JdongTest" hash-for-method="f(1, a)">f(1, a)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-suiteM" title="Metria.TestMetr" hash-for-method="add">add</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-suiteM" title="Metria.TestMetr" hash-for-method="lgin(admin, 111111)">lgin(admin, 111111)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-suiteM" title="comm.JdongTest" hash-for-method="loanLg(test, 111111)">loanLg(test, 111111)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-suiteM" title="comm.JdongTest" hash-for-method="returnurl">returnurl</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-suiteM -->
@@ -158,16 +138,15 @@
           <div class="suite-suiteM-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">comm.JdongTest</span>
+              <span class="class-name">Metria.TestMetr</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="delePro">
-                  </a> <!-- delePro -->
-                  <span class="method-name">delePro</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: An invalid or illegal selector was specified
+                  <a name="del">
+                  </a> <!-- del -->
+                  <span class="method-name">del</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[@class=&apos;el-table_1_column_3&apos;]/div[@class=&apos;cell&apos;]/button[@type=&apos;button&apos;][3]&quot;}
 Command duration or timeout: 0 milliseconds
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -182,11 +161,11 @@ Command duration or timeout: 0 milliseconds
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:465)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at comm.loanL.delePro(loanL.java:68)
-	at comm.JdongTest.delePro(JdongTest.java:130)
+	at Metria.addMetr.del(addMetr.java:49)
+	at Metria.TestMetr.del(TestMetr.java:46)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -200,18 +179,13 @@ Command duration or timeout: 0 milliseconds
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.InvalidSelectorException: The given selector .el-table__row hover-row&gt;td:nth-type-of(4)&gt;.cell&gt;button :nth-type-of(1) is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: An invalid or illegal selector was specified
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[@class=&apos;el-table_1_column_3&apos;]/div[@class=&apos;cell&apos;]/button[@type=&apos;button&apos;][3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
 System info: host: &apos;CE-20150821IBGT&apos;, ip: &apos;10.36.40.91&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_141&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11858)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11889)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11893)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/k(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13378)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13383)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous7678910908640829723webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:13325)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous1505374216930056560webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11884)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ADMINI~1/AppData/Local/Temp/anonymous1505374216930056560webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:918)
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -221,56 +195,16 @@ Driver info: driver.version: unknown
           <div class="suite-suiteM-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">comm.JdongTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="addpro(testc14331)">
-                  </a> <!-- addpro(testc14331) -->
-                  <span class="method-name">addpro</span>
-                  <span class="parameters">(testc14331)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="f(2, b)">
-                  </a> <!-- f(2, b) -->
-                  <span class="method-name">f</span>
-                  <span class="parameters">(2, b)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="f(1, a)">
-                  </a> <!-- f(1, a) -->
-                  <span class="method-name">f</span>
-                  <span class="parameters">(1, a)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loanLg(test, 111111)">
-                  </a> <!-- loanLg(test, 111111) -->
-                  <span class="method-name">loanLg</span>
-                  <span class="parameters">(test, 111111)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="returnurl">
-                  </a> <!-- returnurl -->
-                  <span class="method-name">returnurl</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-suiteM-class-passed -->
-          <div class="suite-suiteM-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">Metria.TestMetr</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="add">
+                  </a> <!-- add -->
+                  <span class="method-name">add</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="lgin(admin, 111111)">
@@ -294,7 +228,6 @@ Driver info: driver.version: unknown
   &lt;test verbose=&quot;2&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Metria.TestMetr&quot;/&gt;
-      &lt;class name=&quot;comm.JdongTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- suiteM --&gt;
@@ -308,7 +241,7 @@ Driver info: driver.version: unknown
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -319,34 +252,10 @@ Driver info: driver.version: unknown
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">testa</span>
+              <span class="test-group-name">testdel</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">loanLg</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">returnurl</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">testb</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">addpro</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">delePro</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">testc</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">f</span>
+                <span class="method-in-group-name">del</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -366,40 +275,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loanLg')
-data.setCell(0, 2, 'comm.JdongTest')
-data.setCell(0, 3, 2761);
+data.setCell(0, 1, 'del')
+data.setCell(0, 2, 'Metria.TestMetr')
+data.setCell(0, 3, 30476);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'addpro')
-data.setCell(1, 2, 'comm.JdongTest')
-data.setCell(1, 3, 2095);
+data.setCell(1, 1, 'add')
+data.setCell(1, 2, 'Metria.TestMetr')
+data.setCell(1, 3, 2577);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'lgin')
 data.setCell(2, 2, 'Metria.TestMetr')
-data.setCell(2, 3, 837);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'delePro')
-data.setCell(3, 2, 'comm.JdongTest')
-data.setCell(3, 3, 76);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'returnurl')
-data.setCell(4, 2, 'comm.JdongTest')
-data.setCell(4, 3, 29);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'f')
-data.setCell(5, 2, 'comm.JdongTest')
-data.setCell(5, 3, 9);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'f')
-data.setCell(6, 2, 'comm.JdongTest')
-data.setCell(6, 3, 2);
+data.setCell(2, 3, 894);
 window.suiteTableData['suiteM']= { tableData: data, tableDiv: 'times-div-suiteM'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-suiteM">
               </div> <!-- times-div-suiteM -->
             </div> <!-- times-div -->
@@ -425,129 +318,29 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">comm.JdongTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforeSuite</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">47 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">Metria.TestMetr</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">Befclass</span>
-                <span class="method-start">70 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">comm.JdongTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">70 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">20243 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">f(1, a)</span>
-                <span class="method-start">20243 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">20254 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">20255 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">f(2, b)</span>
-                <span class="method-start">20255 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">20259 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">20260 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">returnurl</span>
-                <span class="method-start">20260 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">20291 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">20308 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">loanLg(test, 111111)</span>
-                <span class="method-start">20308 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Metria.TestMetr</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">lgin(admin, 111111)</span>
-                <span class="method-start">20662 ms</span>
+                <span class="method-start">18886 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">after</span>
-                <span class="method-start">21503 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">comm.JdongTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">23071 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">23072 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">addpro(testc14331)</span>
-                <span class="method-start">23075 ms</span>
+                <span class="method-name">add</span>
+                <span class="method-start">19803 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">25172 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">25175 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">delePro</span>
-                <span class="method-start">25175 ms</span>
+                <span class="method-name">del</span>
+                <span class="method-start">22384 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">25266 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">25266 ms</span>
+                <span class="method-name">after</span>
+                <span class="method-start">52870 ms</span>
               </div> <!-- configuration-class after -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">26272 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="configuration-suite after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">26299 ms</span>
-              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

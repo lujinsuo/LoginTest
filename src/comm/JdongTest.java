@@ -148,7 +148,7 @@ public class JdongTest {
 		}
 		for(Integer it:hs){
 			str=Integer.toString(it);
-			return new Object[][]{new Object[]{"testc1"+str+1}};
+			return new Object[][]{new Object[]{"test"+str+1}};
 		}
 		return null;
 
